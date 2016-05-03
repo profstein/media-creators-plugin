@@ -53,9 +53,7 @@ function create_creator_taxonomies() {
         'add_new_item'      => __( 'Add New Student' ),
         'new_item_name'     => __( 'New Student Name' ),
         'separate_items_with_commas' => null,
-22
     'add_or_remove_items'   => __( 'Add or remove students' ),
-23
     'choose_from_most_used' => __( 'Choose from the already used students' ),
         'menu_name'         => __( 'Student' ),
     );
