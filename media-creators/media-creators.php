@@ -8,7 +8,7 @@
 
 // hook into the init action and call create_course_taxonomies when it fires
 add_action( 'init', 'create_creator_taxonomies', 0 );
- 
+
 // create two taxonomies, student and course for the post type "post"
 function create_creator_taxonomies() {
     // Add new taxonomy, make it hierarchical (like categories)
@@ -25,7 +25,7 @@ function create_creator_taxonomies() {
         'new_item_name'     => __( 'New Course Name' ),
         'menu_name'         => __( 'Course' ),
     );
- 
+
     $args = array(
         'hierarchical'      => true,
         'labels'            => $labels,
@@ -34,11 +34,11 @@ function create_creator_taxonomies() {
         'query_var'         => true,
         'rewrite'           => array( 'slug' => 'course' ),
     );
- 
+
     register_taxonomy( 'course', array( 'post' ), $args );
-    
-    
-    
+
+
+
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
         'name'              => _x( 'Students', 'taxonomy general name' ),
@@ -59,7 +59,7 @@ function create_creator_taxonomies() {
     'choose_from_most_used' => __( 'Choose from the already used students' ),
         'menu_name'         => __( 'Student' ),
     );
- 
+
 //    $args = array(
 //        'hierarchical'      => false,
 //        'labels'            => $labels,
@@ -68,9 +68,9 @@ function create_creator_taxonomies() {
 //        'query_var'         => true,
 //        'rewrite'           => array( 'slug' => 'student' ),
 //    );
- 
+
 //    register_taxonomy( 'student', array( 'post' ), $args );
-    
+
     register_taxonomy('students','post',array(
     'hierarchical' => false,
     'labels' => $labels,
@@ -80,9 +80,9 @@ function create_creator_taxonomies() {
     'query_var' => true,
     'rewrite' => array( 'slug' => 'student' ),
   ));
-    
-    
-    
+
+
+
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
         'name'              => _x( 'Majors', 'taxonomy general name' ),
@@ -97,7 +97,7 @@ function create_creator_taxonomies() {
         'new_item_name'     => __( 'New Major Name' ),
         'menu_name'         => __( 'Major' ),
     );
- 
+
     $args = array(
         'hierarchical'      => true,
         'labels'            => $labels,
@@ -106,11 +106,11 @@ function create_creator_taxonomies() {
         'query_var'         => true,
         'rewrite'           => array( 'slug' => 'major' ),
     );
- 
+
     register_taxonomy( 'major', array( 'post' ), $args );
-    
-    
-    
+
+
+
 }
 
 ?>
